@@ -1,5 +1,7 @@
 import React from 'react';
 import Typed from 'react-typed';
+import { Link } from "react-router-dom";
+
 
 
 const LandingHero = () => {
@@ -25,9 +27,9 @@ const LandingHero = () => {
           />
         </div>
         <p className='md:text-2xl text-xl font-semibold text-gray-500'>The simplest way to calculate who owes what.</p>
-        <button className='bg-[#00df9a] hover:bg-[#FFB000] w-[200px] rounded-3xl font-medium my-6 mx-auto py-3 text-white transition duration-300 ease-in-out'>
+        <Link to="/new"><button className='bg-[#00df9a] hover:bg-[#FFB000] w-[200px] rounded-3xl font-medium my-6 mx-auto py-3 text-white transition duration-300 ease-in-out'>
           Get Started
-        </button>
+        </button></Link>
       </div>
     </div>
   );

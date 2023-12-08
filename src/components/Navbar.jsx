@@ -3,7 +3,7 @@ import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { Outlet, Link } from "react-router-dom";
 
 
-export default function LandingNavbar() {
+export default function Navbar() {
     const [nav, setNav] = useState(false);
 
     const handleNav = () => {
@@ -21,13 +21,6 @@ export default function LandingNavbar() {
                 <Link to="/example"><li className='p-4'>Example</li></Link>
                 <Link to="/about"><li className='p-4'>About</li></Link>
                 <Link to="/contact"><li className='p-4'>Contact</li></Link>
-                <Link to="/new">
-                    <li className='px-2 pt-2'>
-                        <button className='bg-[#00df9a] hover:bg-[#FFB000] w-[100px] rounded-3xl font-medium py-3 text-white transition duration-300 ease-in-out' >
-                            Start
-                        </button>
-                    </li>
-                </Link>
             </ul>
             <div onClick={handleNav} className='block md:hidden'>
                 {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
