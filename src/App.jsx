@@ -11,7 +11,7 @@ import NewEvent from './pages/newEvent';
 
 function App() {
   return (
-    <>
+    <div>
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPage />} />
@@ -23,7 +23,7 @@ function App() {
         <Route path="*" element={<NoPage />} />
       </Routes>
     </BrowserRouter>
-    </>
+    </div>
   )
 }
 

@@ -1,6 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 export const EventForm = () => {
+    const [participants, setParticipants] = useState(['']);
+
+    const handleAddPerson = () => {
+        setParticipants([...participants, '']);
+    };
+
+    const handleParticipantChange = (index, value) => {
+        const updatedParticipants = [...participants];
+        updatedParticipants[index] = value;
+        setParticipants(updatedParticipants);
+    };
+
+
     return (
         <div>
             <div className='bg-[#ECECEC] flex flex-col justify-center items-center px-16 py-12 max-md:px-5'>
@@ -32,23 +45,37 @@ export const EventForm = () => {
                                 </div>
 
 
-                                <div>
-                                    <div className='font-semibold mb-3'>Participants</div>
-                                    <div className='mb-3'>
-                                        <label for="last_name" className="block mb-2 text-sm font-medium text-gray-900">You</label>
-                                        <input type="text" id="last_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Enter your name" required />
+                                <div className="mb-3">
+                                    <div className="font-semibold mb-3">Participants</div>
+
+                                    {participants.map((participant, index) => (
+                                        <div className="mb-3" key={index}>
+                                            <label htmlFor={`participant_${index}`} className="block mb-2 text-sm font-medium text-gray-900">{`Person ${index + 1}`}</label>
+                                            <input
+                                                type="text"
+                                                id={`participant_${index}`}
+                                                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                                placeholder="Name"
+                                                value={participant}
+                                                onChange={(e) => handleParticipantChange(index, e.target.value)}
+                                                required
+                                            />
+                                        </div>
+                                    ))}
+
+                                    <div className="mb-3">
+                                        <button
+                                            type="button"
+                                            className="text-white bg-gray-900 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                            onClick={handleAddPerson}
+                                        >
+                                            Add New Person +
+                                        </button>
                                     </div>
 
-                                    <div className='mb-3'>
-                                        <label for="last_name" className="block mb-2 text-sm font-medium text-gray-900">Person 2</label>
-                                        <input type="text" id="last_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Name" required />
-                                    </div>
-
-                                    <div className='mb-3'>
-                                        <button type="button" class="text-white bg-gray-900 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add New Person +</button>
-                                    </div>
-                                    <button type="button" class="bg-[#00df9a] hover:bg-[#FFB000] w-[200px] rounded-3xl font-medium py-3 text-white transition duration-300 ease-in-out">Create Event</button>
-
+                                    <button type="button" className="bg-[#00df9a] hover:bg-[#FFB000] w-[200px] rounded-3xl font-medium py-3 text-white transition duration-300 ease-in-out">
+                                        Create Event
+                                    </button>
                                 </div>
                             </div>
                         </form>

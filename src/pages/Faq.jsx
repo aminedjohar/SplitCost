@@ -20,7 +20,7 @@ const faq = () => {
     },
     {
       id: 2,
-      question: "How do I use the expense-splitting tool?",
+      question: "How do I use the Sliplicost tool?",
       answer: "Using the tool is simple. Navigate to the website, enter the total expenses and the names of the participants, specify who paid for each expense, and the tool will calculate each participant's share.",
     },
     {
