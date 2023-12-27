@@ -29,7 +29,7 @@ function App() {
           {/*End Event Page */}
 
 
-          <Route path="*" element={<NoPage />} />
+          <Route path="/*" element={<NoPage />} />
         </Routes>
       </BrowserRouter>
     </div>
