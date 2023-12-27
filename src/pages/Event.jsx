@@ -3,7 +3,7 @@ import Footer from '../components/landing-footer'
 import Navbar from '../components/Navbar'
 import { EventDetails } from '../components/EventDetails'
 
-const ListEvent = () => {
+const Event = () => {
   return (
     <div>
       <Navbar />
@@ -13,4 +13,4 @@ const ListEvent = () => {
   )
 }
 
-export default ListEvent
+export default Event

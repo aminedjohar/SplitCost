@@ -1,0 +1,28 @@
+{
+  "event": [
+      {
+          "id": 1,
+          "name": "Trip to Beach",
+          "participants": [
+              "Amine",
+              "Sam",
+              "Alex"
+          ],
+          "currency": "USD",
+          "expenses": []
+      },
+      {
+        "id": 2,
+        "name": "Trip to Beach",
+        "participants": [
+            "A",
+            "S",
+            "x"
+        ],
+        "currency": "MAD",
+        "expenses": []
+    }
+  ]
+}
+
+
