@@ -4,9 +4,9 @@ import Footer from '../components/landing-footer'
 
 
 const stats = [
-  { id: 1, name: 'Transactions every 24 hours', value: '44 million' },
-  { id: 2, name: 'Assets under holding', value: '$119 trillion' },
-  { id: 3, name: 'New users annually', value: '46,000' },
+  { id: 1, name: '', value: 'Amine Djohar' },
+  { id: 2, name: '', value: 'Brahim Kabssi' },
+  { id: 3, name: '', value: 'Achraf Dahak' },
 ]
 
 const About = () => {
