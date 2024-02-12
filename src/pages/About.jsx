@@ -5,7 +5,7 @@ import Footer from '../components/landing-footer'
 
 const stats = [
   { id: 1, name: '', value: 'Amine Djohar' },
-  { id: 2, name: '', value: 'Brahim Kabssi' },
+  { id: 2, name: '', value: 'Ibrahim Kabsy' },
   { id: 3, name: '', value: 'Achraf Dahak' },
 ]
 
